@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.portfolio {
+    width: 100%;
+    height: 977px;
+    padding-top: 100px;
+}
+
+.portfolio-box {
+    text-align: center;
+}
+
+.portfolio-box .desc {
+    width: 410px;
+    font-size: 16px !important;
+    margin: 20px auto 50px;
+}
+
+.portfolio-box .p-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-box .p-row .p-col {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.portfolio-box .p-row .p-col .col-img {
+    width: 290px;
+    height: 290px;
+    border-radius: 10px;
+}
+
+.demo-btn {
+    position: absolute;
+    bottom: -40px;
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.demo-btn:hover {
+    box-shadow: 0 0 17px 2px green;
+}
+
+.portfolio-box .p-row .p-col::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.portfolio-box .p-row .p-col:hover .demo-btn {
+    bottom: calc(50% - 20px);
+}
+
+.portfolio-box .p-row .p-col:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    backdrop-filter: blur(5px)
+}
